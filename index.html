@@ -16,6 +16,7 @@
         import textInput from "./textInput.js"
         import lava from "./lava.js";
         import bridge from "./bridge.js"
+        import sentence from "./sentence.js"
         const frame = new Frame(FIT, 1024, 768, light, dark, ready);
 
         function ready() {
@@ -23,11 +24,8 @@
             scorer();
             textInput();
             lava();
+            sentence()
             bridge();
-
-
-       
-           
         }
 
     </script>
