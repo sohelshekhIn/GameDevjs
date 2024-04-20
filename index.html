@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<!-- zimjs.com - JavaScript Canvas Framework -->
+<script src="https://zimjs.org/cdn/nft/00/zim.js"></script>
+
+<script>
+
+const frame = new Frame("fit", 1024, 768, darker, dark);
+frame.on("ready", () => {
+    const stage = frame.stage;
+    let stageW = frame.width;
+    let stageH = frame.height;
+
+  
+    
+    new Label("More Squiggle and Blob Editing in ZIM NFT", null, null, tin).loc(30,30)
+        
+    STYLE = {
+        stickColor:purple,
+        Label:{alpha:.9, color:purple.lighten(.1), italic:true, scale:.5}
+    };    
+    
+    
+    
+    // There is also makeSquiggle() as a method of Blob
+    new Label("makeBlob() - convert a Squiggle to Blob").loc(500,400)
+    var s5 = new Squiggle({color:green, interactive: false }).loc(500,500);
+    s5.appendPoints([[s5.width, 0], [s5.width, 150], [0,150]], "free");
+    var b2 = s5.makeBlob("free").loc(s5); 
+    b2.color = yellow;
+    s5.removeFrom(); 
+    
+    STYLE = {};
+    
+    new Button({
+        backgroundColor:orange,
+        rollBackgroundColor:yellow,
+        label:"DOCS",
+        corner:5,
+        color:darker,
+        rollColor:darker
+    }).sca(.5).pos(30,30,RIGHT).tap(()=>{
+        zgo("https://zimjs.com/docs.html?items=Squiggle,Blob,splitPoints,reversePoints,appendPoints,prependPoints,trimEndPoints");
+    });
+    
+    frame.madeWith(tin,null,null,darker).pos(30,30,RIGHT,BOTTOM);
+        
+    stage.update(); // needed to view changes
+});
+
+</script>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+<body></body>
+</html>
