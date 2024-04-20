@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <script src="leaderboard.js" defer></script>
+    <style>
+        /* Add gradient font for lava effect */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        /* Style leaderboard table */
+        table {
+            width: 50%;
+            margin: auto;
+            border-radius: 10px;
+            background-color: rgb(250, 249, 246);
+            /* Set background color to black */
+            font-family: 'Roboto', sans-serif;
+            /* Use Roboto font */
+        }
+
+        th,
+        td {
+            border: 1px solid rgb(224, 148, 17);
+            padding: 8px;
+            text-align: center;
+            color: transparent;
+            /* Hide text color */
+            background-clip: text;
+            /* Apply gradient color to text */
+            -webkit-background-clip: text;
+            /* For Safari */
+        }
+
+        body {
+            background-image: linear-gradient(red, yellow);;
+            /* Deep red color resembling lava */
+        }
+
+        /* Define gradient color for text */
+        #leaderboard-table th {
+            background-image: linear-gradient(to right, #ff0000, #ff6600);
+            /* Gradient color for th */
+        }
+        #bottom-text {
+            text-align: center;
+            bottom: 0%;
+            color: rgb(255, 3, 3); /* Set text color to white */
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+            margin-top: 20px; /* Add some margin at the top */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="game-name" style="text-align: center;"></h1>
+    <h2 id="user-score" style="text-align: center;"></h2>
+    <table id="leaderboard-table"></table>
+    <div id="bottom-text">You are the Hero, You Saved () persons.</div>
+</body>
+
+</html>
