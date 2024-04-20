@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lava Walk</title>
+    <script src=https://zimjs.org/cdn/easystar-0.4.3.min.js></script>
+    <!-- <script src="clock.js"></script> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <script type="module">
+        import zim from "https://zimjs.org/cdn/016/zim_game";
+        import clock from "./clock.js";
+        const frame = new Frame(FIT, 1024, 768, light, dark, ready);
+
+        function ready() {
+            // clock();
+
+            new Rectangle({width:200, height:100, color:blue, corner:20}).loc(100, 100);
+            const timer = new Timer({
+                time: 60,
+                borderColor: dark,
+                isometric: LEFT // isometric for left side of board
+            }).loc(400, 400);
+
+            const scorer = new Scorer({ backgroundColor: yellow, color: black, isometric: RIGHT }).loc(W - 100, 100);
+
+            // const lb = new LeaderBoard({
+            //     data: "E-MAILED CODE FROM zimjs.com/leaderboard/",
+            //     corner: 0,
+            //     backgroundColor: dark,
+            //     titleColor: light
+            // }).center();
+
+            // then to record a score at some point later:
+            lb.score(500);
+            // const Ticker = new zim.Ticker();
+
+            // setInterval(update,1000)
+            // // const ticker = zim.Ticker(update, 1000); // Update every second (1000 milliseconds)
+            // // Ticker.add(update)
+            // // Define the callback function to be executed every second
+            // function update() {
+            //     // Call stage.update() to update the stage
+            //     clock.timer
+            //     S.update();
+            // }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="zim-canvas"></div>
+</body>
+
+</html>
