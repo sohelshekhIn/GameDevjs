@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>ZIM - Code Creativity</title>
+
+<!-- zimjs.com - JavaScript Canvas Framework -->
+<script type="module">
+
+import zim from "https://zimjs.org/cdn/016/zim_game";
+
+// See Docs under Frame for FIT, FILL, FULL, and TAG
+new Frame(FIT, 1024, 768, light, dark, ready);
+function ready() {
+    
+    // given F (Frame), S (Stage), W (width), H (height)
+    // put code here
+    
+    new Circle(100, purple)
+        .center()
+        .drag();
+
+
+    const input = new TextInput().loc(100,100); // adds a default input field to the stage
+
+    new Button({label:"SUBMIT"}).loc(100, 200).tap(()=>{
+    zog(input.text); // whatever is typed into the LabelInput
+    });
+
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // TIMER AND SCORER
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    // set a timer to be positioned isometric left
+    var timer = new Timer({
+        time:60,
+        // startPaused:true,
+        // step:500,
+        // colon:true,
+        borderColor:dark,
+        
+    })
+        .tap(function () {
+            timer.start(60);
+            timer.backing.color = yellow;
+        })
+        .pos(30,30,LEFT,BOTTOM) // .place();
+    timer.on("complete",function () {
+        timer.backing.color = red;
+        timer.color = white;
+        stage.update();
+    });
+
+    // set a Scorer 
+    // isometric right gets registration on top right
+    // this allows the Timer and Scorer to toggle to top view evenly
+    var scorer = new Scorer({
+        borderColor:dark,
+    }).pos(30,30,RIGHT,BOTTOM)
+
+        
+} // end ready
+
+</script>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+<body></body>
+</html>
