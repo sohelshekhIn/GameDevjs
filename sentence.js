@@ -35,6 +35,7 @@ function sentence() {
     corner: 10,
   }).loc(268, 640.2);
   return random_sentence
+  return random_sentence;
 }
 
 export default sentence;
