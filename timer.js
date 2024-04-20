@@ -1,7 +1,7 @@
 import zim from "https://zimjs.org/cdn/016/zim_game";
 const clock = (stage) => {
   var timer = new Timer({
-    time: 1,
+    time: 60,
     // startPaused:true,
     // step:500,
     // colon:true,
