@@ -15,20 +15,24 @@
         import scorer from "./scorer.js";
         import textInput from "./textInput.js"
         import lava from "./lava.js"
-        import textInput from "./sentence.js"
-        import sentence from "./sentence.js"
-        const frame = new Frame(FIT, 1024, 768, light, dark, ready);
+        import sentence from "./sentence.js";
+        import girl from "./girl.js"
+        import bridge from "./bridge.js"
+        var assets = ["playdoll.png"];
+    const path = "https://zimjs.org/assets/";
+        const frame = new Frame(FIT, 1024, 768, light, dark, ready,assets, path);
 
         function ready() {
             timer();
             scorer();
-            textInput();
             lava();
+            girl()
+            var random = sentence()
+            textInput(random);
+            bridge()
 
 
-girl()
-       
-           
+
         }
 
     </script>
