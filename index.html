@@ -16,7 +16,10 @@
         import textInput from "./textInput.js"
         import lava from "./lava.js";
         import bridge from "./bridge.js"
-        const frame = new Frame(FIT, 1024, 768, light, dark, ready);
+        import girl from "./girl.js"
+        var assets = ["playdoll.png"];
+    const path = "https://zimjs.org/assets/";
+        const frame = new Frame(FIT, 1024, 768, light, dark, ready,assets, path);
 
         function ready() {
             timer();
@@ -24,7 +27,8 @@
             textInput();
             lava();
             bridge();
-
+            // var girl = new Pic("playdoll.png").sca(0.1).loc(0,70);
+            girl();
 
        
            
