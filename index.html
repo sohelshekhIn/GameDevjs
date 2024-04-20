@@ -14,7 +14,8 @@
         import timer from "./timer.js";
         import scorer from "./scorer.js";
         import textInput from "./textInput.js"
-        import lava from "./lava.js"
+        import lava from "./lava.js";
+        import bridge from "./bridge.js"
         const frame = new Frame(FIT, 1024, 768, light, dark, ready);
 
         function ready() {
@@ -22,6 +23,7 @@
             scorer();
             textInput();
             lava();
+            bridge();
 
 
        
