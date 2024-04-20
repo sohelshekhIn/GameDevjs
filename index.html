@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lava Walk</title>
+    <script src=https://zimjs.org/cdn/easystar-0.4.3.min.js></script>
+    <!-- <script src="clock.js"></script> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <script type="module">
+        import zim from "https://zimjs.org/cdn/016/zim_game";
+        import timer from "./timer.js";
+        import scorer from "./scorer.js";
+        import textInput from "./textInput.js"
+        import lava from "./lava.js"
+        const frame = new Frame(FIT, 1024, 768, light, dark, ready);
+
+        function ready() {
+            timer();
+            scorer();
+            textInput();
+            lava();
+
+
+       
+           
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="zim-canvas"></div>
+</body>
+
+</html>
